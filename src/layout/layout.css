@@ -1,0 +1,112 @@
+/* Sidebar 容器 */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+/* 菜单整体 */
+.sidebar-menu {
+  padding: 8px 0;
+}
+
+/* ========== 一级菜单 ========== */
+
+.menu-main {
+  height: 44px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #666;
+}
+
+.menu-main:hover {
+  background: #f5f5f5;
+}
+
+.menu-main-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-main-icon {
+  font-size: 18px;
+  color: #666;
+}
+
+.menu-main-title {
+  font-size: 14px;
+}
+
+/* 一级菜单选中（仅用于“无二级菜单”） */
+.menu-main-active {
+  color: #d7000f;
+}
+
+.menu-main-active .menu-main-icon {
+  color: #d7000f;
+}
+
+/* 下拉箭头 */
+.menu-arrow {
+  font-size: 12px;
+  color: #999;
+  transition: transform 0.2s ease;
+}
+
+.menu-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* ========== 二级菜单 ========== */
+
+.menu-sub {
+  padding-left: 24px;
+}
+
+.menu-sub-item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.menu-sub-item:hover {
+  background: #f5f5f5;
+}
+
+/* 二级图标（线性） */
+.menu-sub-icon {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 二级选中状态 */
+.menu-sub-active {
+  background: #fdecec;
+  color: #d7000f;
+  position: relative;
+}
+
+.menu-sub-active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #d7000f;
+}
+
+.menu-sub-active .menu-sub-icon {
+  color: #d7000f;
+}
